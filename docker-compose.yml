@@ -1,0 +1,11 @@
+services: 
+  bot: 
+    build: "."
+    env_file: 
+      - .env
+    image: "unknown404/musicbot.ts:latest"
+    restart: unless-stopped
+    volumes: 
+      - "./cache:/app/cache"
+      - "./logs:/app/logs"
+version: "2.4"
